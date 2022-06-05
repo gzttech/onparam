@@ -1,11 +1,11 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-	define([], factory);
-    } else if (typeof module === 'object' && module.exports) {
-	module.exports = factory();
-    } else {
-	root.returnExports = factory();
-    }
+  if (typeof define === 'function' && define.amd) {
+	  define([], factory);
+  } else if (typeof module === 'object' && module.exports) {
+	  module.exports = factory();
+  } else {
+	  root.returnExports = factory();
+  }
 }(typeof self !== 'undefined' ? self : this, function () {
   var script =  document.currentScript;
   var defaultCdnDomain = 'https://cdn.jsdelivr.net';
@@ -90,16 +90,16 @@
   }
 
   (function() {
-	  let scriptSrc = new URL(script.src);
-	  let href = new URL(window.location.href);
-	  let key = scriptSrc.searchParams.get("key");
-	  let value = scriptSrc.searchParams.get("value");
-	  let action = scriptSrc.searchParams.get("action");
+    let scriptSrc = new URL(script.src);
+    let href = new URL(window.location.href);
+    let key = scriptSrc.searchParams.get("key");
+    let value = scriptSrc.searchParams.get("value");
+    let action = scriptSrc.searchParams.get("action");
     let jsCode = script.getAttribute('x-code');
     let cdnDomain = script.getAttribute('x-domain');
-	  if(!!key && !!value && !!action && href.searchParams.get(key) == value){
+    if(!!key && !!value && !!action && href.searchParams.get(key) == value){
       let [prefix, version] = formatPackage(action);
-	    appendFromCDN(prefix, version, jsCode, cdnDomain);
+      appendFromCDN(prefix, version, jsCode, cdnDomain);
 	  }
   })();
 }));
