@@ -25,3 +25,12 @@ onparam.js可以帮助页面在queryParams传递了某个特定参数时（比�
   x-code="eruda.init();">
 </script>
 ```
+
+### 加载mdebug
+
+```
+<script
+  src="onparam.js?key=action&value=test&action=mdebug"
+  x-code="mdebug.init();">
+</script>
+```
