@@ -89,15 +89,6 @@
     }
   }
 
-  var actions = {
-	  'vconsole': () => {
-	    appendScriptFile('https://cdn.staticfile.org/vConsole/3.3.4/vconsole.min.js')
-	      .then(function() {
-		      appendScriptCode("window.vConsole = new window.VConsole();")
-		    })
-	  }
-  };
-
   (function() {
 	  let scriptSrc = new URL(script.src);
 	  let href = new URL(window.location.href);
@@ -107,7 +98,6 @@
     let jsCode = script.getAttribute('x-code');
     let cdnDomain = script.getAttribute('x-domain');
 	  if(!!key && !!value && !!action && href.searchParams.get(key) == value){
-      console.log(key, value, action, jsCode, cdnDomain);
       let [prefix, version] = formatPackage(action);
 	    appendFromCDN(prefix, version, jsCode, cdnDomain);
 	  }
