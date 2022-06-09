@@ -23,7 +23,7 @@ onparam.js可以以一个script标签的形式被加载在HTML中，具体形式
   - `<PACKAGE>`即为包的名称，如jquery等。
   - 可选的`[@VERSION]`只包的版本，如果不提供则使用jsdelivr中的最新版本。
 - <X-CODE>是在js文件加载完成后需要执行的js代码
-- <X-DOMAIN>是jsdelivr的镜像地址或者备用地址，在https://cdn.jsdelivr.net不能使用时，可以指定这个地址（比如https://fastly.jsdelivr.net）。
+- <X-DOMAIN>是jsdelivr的镜像地址或者备用地址，在 https://cdn.jsdelivr.net 不能使用时，可以指定这个地址（比如 https://fastly.jsdelivr.net ）。
 
 
 ## Cookbook
