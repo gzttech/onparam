@@ -16,14 +16,14 @@ onparam.js可以以一个script标签的形式被加载在HTML中，具体形式
 
 简单的对上面的参数做一下解释：
 
-- <ONPARAM_JS_PATH>就是onparam.js的地址，既可以下载到本地中通过引用，也可以直接通过公共CDN引用，比如 https://cdn.jsdelivr.net/gh/gzttech/onparam/src/onparam.js ，因为jsdelivr的默认地址有时在国内不能访问，可以考虑使用镜像地址 https://fastly.jsdelivr.net/gh/gzttech/onparam/src/onparam.js
-- <KEY>和<VALUE>，当页面的queryParams中包含设置的KEY=VALUE这个参数时，onparam.js会加载action中指定的库。比如设置了`onparam.js?key=test&value=enable`，那么比如访问的页面是"/index.html?test=enable&..."，那么onparam.js就会加载指定action中指定的库。
-- <LIB>，需要加载的lib地址，lib的规则同jsdelivr，即`[REPO/]<PACKAGE>[@VERSION]`，其中
+- `<ONPARAM_JS_PATH>`就是onparam.js的地址，既可以下载到本地中通过引用，也可以直接通过公共CDN引用，比如 https://cdn.jsdelivr.net/gh/gzttech/onparam/src/onparam.js ，因为jsdelivr的默认地址有时在国内不能访问，可以考虑使用镜像地址 https://fastly.jsdelivr.net/gh/gzttech/onparam/src/onparam.js 。
+- `<KEY>/<VALUE>`，当页面的queryParams中包含设置的KEY=VALUE这个参数时，onparam.js会加载action中指定的库。比如设置了`onparam.js?key=test&value=enable`，那么比如访问的页面是"/index.html?test=enable&..."，那么onparam.js就会加载指定action中指定的库。
+- `<LIB>`，需要加载的lib地址，lib的规则同jsdelivr，即`[REPO/]<PACKAGE>[@VERSION]`，其中
   - 可选的`[REPO/]`默认为`npm/`，如果加载的包来自github则使用`gh/`前缀。
   - `<PACKAGE>`即为包的名称，如jquery等。
   - 可选的`[@VERSION]`只包的版本，如果不提供则使用jsdelivr中的最新版本。
-- <X-CODE>是在js文件加载完成后需要执行的js代码
-- <X-DOMAIN>是jsdelivr的镜像地址或者备用地址，在 https://cdn.jsdelivr.net 不能使用时，可以指定这个地址（比如 https://fastly.jsdelivr.net ）。
+- `<X-CODE>`是在js文件加载完成后需要执行的js代码
+- `<X-DOMAIN>`是jsdelivr的镜像地址或者备用地址，在 https://cdn.jsdelivr.net 不能使用时，可以指定这个地址（比如 https://fastly.jsdelivr.net ）。
 
 
 ## Cookbook
